@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+// salva comment
 const catEnum = [
   "Electrónica",
   "Moda y Accesorios",
