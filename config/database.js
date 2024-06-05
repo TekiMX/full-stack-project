@@ -1,20 +1,21 @@
-import dotenv from "dotenv";
-import mongoose from "mongoose";
+import dotenv from 'dotenv'
+import mongoose from 'mongoose'
 
-dotenv.config(); // Leo las variables de entorno
+// read enviromentt variables
+dotenv.config()
 
 const connect = () => {
-  mongoose.connect(process.env.DB_CONNECT_URI);
+  mongoose.connect(process.env.DB_CONNECT_URI) // conect to the database
 
-  const { connection } = mongoose; 
+  const { connection } = mongoose // check if connection its alive
 
-  connection.once("open", () => {
-    console.log("✅ Database connection stablished");
-  });
+  connection.once('open', () => {
+    console.log('✅ Database connection stablished ⤴')
+  })
 
-  connection.on("error", (error) => {
-    console.error("❌ Database connection error:", error);
-  });
-};
+  connection.on('error', (error) => {
+    console.log('❌ database connecton error ❌', error)
+  })
+}
 
-export { connect };
+export { connect }

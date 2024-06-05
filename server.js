@@ -1,15 +1,15 @@
-import { connect } from "./config/database.js";
-import express from "express";
+import { connect } from './config/database.js'
+import express from 'express'
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 
-connect();
+connect()
 
-const api = express();
-api.use(express.json());
+const api = express()
+api.use(express.json())
 
-// Aqui van las rutas
-
+// Routes here
 api.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT} 🚀`);
-});
+  console.log(`Server 💻 is running 🏃 on 🌎 http://localhost:${PORT}`)
+}
+)

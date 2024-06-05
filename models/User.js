@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 //Esquema
 const userSchema = new mongoose.Schema({
-  email: { type: String, unique: true, required: true, match: /.+\@.+\..+/ },
+    email: { type: String, unique: true, lowercase: true, required: true, match: /.+\@.+\..+/ },
     password: {type:String, unique:true, required:true},
     name:{type:String, required:true},
     last_name:{type:String, required:true},
